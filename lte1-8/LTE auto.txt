@@ -1,0 +1,678 @@
+{
+    "dns": {
+        "port": 53,
+        "queryStrategy": "UseIPv4",
+        "servers": [
+            "1.1.1.1",
+            "8.8.8.8",
+            {
+                "address": "77.88.8.8",
+                "domains": [
+                    "geosite:category-ru"
+                ]
+            }
+        ]
+    },
+    "inbounds": [
+        {
+            "listen": "127.0.0.1",
+            "port": 10808,
+            "protocol": "socks",
+            "settings": {
+                "auth": "noauth",
+                "udp": true
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true,
+                "routeOnly": false
+            },
+            "tag": "socks"
+        },
+        {
+            "listen": "127.0.0.1",
+            "port": 10809,
+            "protocol": "http",
+            "settings": {
+                "allowTransparent": false
+            },
+            "sniffing": {
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "enabled": true,
+                "routeOnly": false
+            },
+            "tag": "http"
+        }
+    ],
+    "meta": null,
+    "observatory": {
+        "enableConcurrency": true,
+        "probeInterval": "1m",
+        "probeUrl": "https://www.google.com/generate_204",
+        "subjectSelector": [
+            "lte-1-k0jpbvgrec8",
+            "lte-2-hd1cuf0v8po",
+            "lte-3-cvm9h68jlu8",
+            "lte-4-iprjptdi78o",
+            "lte-5-hho11uunj3o",
+            "lte-6-tt0bjqkf66",
+            "lte-7-k783f1e1bpg",
+            "lte-8-kkb9nloccmo",
+            "lte-9-b6c2delt25",
+            "lte-10-kah35f2psc",
+            "lte-11-us8rk62nkt8",
+            "lte-12-oat2ebgj1b8",
+            "lte-13-l5q62edvpn8",
+            "lte-14-1pselird68g"
+        ]
+    },
+    "outbounds": [
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "testfast.country-1.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "de.eu-ffast.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-1-k0jpbvgrec8"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "testfast.country-1.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "de.eu-ffast.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-2-hd1cuf0v8po"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-1.eu-ffast.com",
+                        "port": 9443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "sun6-21.userapi.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "xhttpSettings": {
+                    "host": "",
+                    "mode": "auto"
+                }
+            },
+            "tag": "lte-3-cvm9h68jlu8"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-33.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "sun6-21.userapi.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-4-iprjptdi78o"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-34.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "sun6-21.userapi.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-5-hho11uunj3o"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-39.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "sun6-21.userapi.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-6-tt0bjqkf66"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-40.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "ws",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "qq",
+                    "serverName": "cdn-tested.eu-ffast.com",
+                    "show": false
+                },
+                "wsSettings": {
+                    "headers": {
+                        "Host": "cdn-tested.eu-ffast.com"
+                    },
+                    "path": "/blog/comments"
+                }
+            },
+            "tag": "lte-7-k783f1e1bpg"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-48.eu-ffast.com",
+                        "port": 9443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "random",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "ads.x5.ru",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-8-kkb9nloccmo"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-35.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "io.ozone.ru",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-9-b6c2delt25"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-37.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "xhttp",
+                "security": "tls",
+                "tlsSettings": {
+                    "allowInsecure": false,
+                    "alpn": [
+                        "h2",
+                        "http/1.1"
+                    ],
+                    "fingerprint": "qq",
+                    "serverName": "country-cdn.eu-ffast.com",
+                    "show": false
+                },
+                "xhttpSettings": {
+                    "host": "country-cdn.eu-ffast.com",
+                    "mode": "auto",
+                    "path": "/server"
+                }
+            },
+            "tag": "lte-10-kah35f2psc"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-38.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "sun6-21.userapi.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-11-us8rk62nkt8"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-41.eu-ffast.com",
+                        "port": 9443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "random",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "ads.x5.ru",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-12-oat2ebgj1b8"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-42.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "api-maps.yandex.ru",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-13-l5q62edvpn8"
+        },
+        {
+            "protocol": "vless",
+            "settings": {
+                "vnext": [
+                    {
+                        "address": "test.country-43.eu-ffast.com",
+                        "port": 443,
+                        "users": [
+                            {
+                                "encryption": "none",
+                                "flow": "xtls-rprx-vision",
+                                "id": "528bc42f-8fa0-4498-8348-0ac20e69e5ff"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "realitySettings": {
+                    "fingerprint": "qq",
+                    "publicKey": "-tePObR3oZwGAUOb5kqTYkNWl6rtUKl0RFuzuu06wgw",
+                    "serverName": "sun6-21.userapi.com",
+                    "shortId": "50",
+                    "show": false
+                },
+                "security": "reality",
+                "tcpSettings": {
+                }
+            },
+            "tag": "lte-14-1pselird68g"
+        },
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ],
+    "remarks": "🇩🇪 LTE АВТО",
+    "routing": {
+        "balancers": [
+            {
+                "fallbackTag": "lte-9-b6c2delt25",
+                "selector": [
+                    "lte-1-k0jpbvgrec8",
+                    "lte-2-hd1cuf0v8po",
+                    "lte-3-cvm9h68jlu8",
+                    "lte-4-iprjptdi78o",
+                    "lte-5-hho11uunj3o",
+                    "lte-6-tt0bjqkf66",
+                    "lte-7-k783f1e1bpg",
+                    "lte-8-kkb9nloccmo",
+                    "lte-10-kah35f2psc",
+                    "lte-11-us8rk62nkt8",
+                    "lte-12-oat2ebgj1b8",
+                    "lte-13-l5q62edvpn8",
+                    "lte-14-1pselird68g"
+                ],
+                "strategy": {
+                    "settings": {
+                        "baselines": [
+                            "2000ms"
+                        ],
+                        "costs": [
+                            {
+                                "match": "lte-1-k0jpbvgrec8",
+                                "regexp": false,
+                                "value": 0
+                            },
+                            {
+                                "match": "lte-2-hd1cuf0v8po",
+                                "regexp": false,
+                                "value": 0
+                            },
+                            {
+                                "match": "lte-3-cvm9h68jlu8",
+                                "regexp": false,
+                                "value": 0
+                            },
+                            {
+                                "match": "lte-4-iprjptdi78o",
+                                "regexp": false,
+                                "value": 1000000000
+                            },
+                            {
+                                "match": "lte-5-hho11uunj3o",
+                                "regexp": false,
+                                "value": 1000000000
+                            },
+                            {
+                                "match": "lte-6-tt0bjqkf66",
+                                "regexp": false,
+                                "value": 2000000000
+                            },
+                            {
+                                "match": "lte-7-k783f1e1bpg",
+                                "regexp": false,
+                                "value": 3000000000
+                            },
+                            {
+                                "match": "lte-8-kkb9nloccmo",
+                                "regexp": false,
+                                "value": 3000000000
+                            },
+                            {
+                                "match": "lte-10-kah35f2psc",
+                                "regexp": false,
+                                "value": 5000000000
+                            },
+                            {
+                                "match": "lte-11-us8rk62nkt8",
+                                "regexp": false,
+                                "value": 4000000000
+                            },
+                            {
+                                "match": "lte-12-oat2ebgj1b8",
+                                "regexp": false,
+                                "value": 4000000000
+                            },
+                            {
+                                "match": "lte-13-l5q62edvpn8",
+                                "regexp": false,
+                                "value": 4000000000
+                            },
+                            {
+                                "match": "lte-14-1pselird68g",
+                                "regexp": false,
+                                "value": 4000000000
+                            }
+                        ],
+                        "expected": 1,
+                        "maxRTT": "2s"
+                    },
+                    "type": "leastLoad"
+                },
+                "tag": "bal_lte"
+            }
+        ],
+        "domainMatcher": "hybrid",
+        "domainStrategy": "IPIfNonMatch",
+        "rules": [
+            {
+                "outboundTag": "direct",
+                "protocol": [
+                    "bittorrent"
+                ],
+                "type": "field"
+            },
+            {
+                "ip": [
+                    "77.88.8.8"
+                ],
+                "outboundTag": "direct"
+            },
+            {
+                "balancerTag": "bal_lte",
+                "inboundTag": [
+                    "socks",
+                    "http"
+                ],
+                "network": "tcp,udp",
+                "type": "field"
+            }
+        ]
+    }
+}
+
